@@ -2,7 +2,7 @@ package org.example.leedcode;
 
 import java.util.Arrays;
 
-public class Question1 {
+public class Q1TwoSum {
 
     public static void main(String[] args){
         int []nums = {2,7,11,15};
