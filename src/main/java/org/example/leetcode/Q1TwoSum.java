@@ -1,4 +1,4 @@
-package org.example.leedcode;
+package org.example.leetcode;
 
 import java.util.Arrays;
 

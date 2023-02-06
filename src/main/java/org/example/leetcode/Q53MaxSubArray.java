@@ -1,7 +1,6 @@
-package org.example.leedcode;
+package org.example.leetcode;
 
 import java.util.Arrays;
-import java.util.List;
 
 import static java.util.Arrays.stream;
 
