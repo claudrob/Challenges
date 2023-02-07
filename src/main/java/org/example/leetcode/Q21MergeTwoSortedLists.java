@@ -32,7 +32,38 @@ public class Q21MergeTwoSortedLists {
 
     }
 
-    public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+    public static ListNode mergeTwoLists(ListNode list1, ListNode list2){
+        ListNode tempHead = new ListNode(0);
+        ListNode temp = tempHead;
+
+        while(list1 != null && list2 != null){
+
+            if(list1.val <= list2.val){
+                temp.next = list1;
+                list1 = list1.next;
+                temp = temp.next;
+            }else{
+                temp.next= list2;
+                list2 = list2.next;
+                temp = temp.next;
+            }
+
+        }
+        while(list1 != null){
+            temp.next = list1;
+            list1 = list1.next;
+            temp = temp.next;
+        }
+        while(list2 != null){
+            temp.next = list2;
+            list2 = list2.next;
+            temp = temp.next;
+        }
+        return tempHead.next;
+
+    }
+
+    public static ListNode mergeTwoListsLong(ListNode list1, ListNode list2) {
         ListNode sortedHead = null;
         ListNode sortedTemp = null;
         while(list1 != null && list2 != null){
